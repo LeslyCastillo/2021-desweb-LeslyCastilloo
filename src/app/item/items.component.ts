@@ -17,8 +17,18 @@ export class ItemsComponent implements OnInit {
   }
 
 
+alertMessage(title: string, message: string, okButtonText: string){
+  let options = {
+    title: title,
+    message: message,
+    okButtonText: okButtonText
+  };
+  
+  alert(options);
+}
+
   ngOnInit(): void {
-    
+
     this.itemService.getItems().subscribe(response => {
       this.items = response['photos'];
     }, err => console.log(err));

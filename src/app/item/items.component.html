@@ -11,16 +11,13 @@ The ActionBar is the NativeScript common abstraction over the Android ActionBar 
 http://docs.nativescript.org/ui/action-bar
 -->
 <ActionBar
-  android.icon="res://icon"
-  android.iconVisibility="always"
-   title="App Rover">
-  <!-- Explicitly hiding the NavigationBar to prevent the default one on iOS-->
-  <NavigationButton visibility="collapsed"></NavigationButton>
-
+   title="App Rover - UMG">
   <!-- Creating custom views for ActionItem-->
-  <ActionItem android.position="right">
+  <ActionItem
+  android.position="right"
+  >
     <GridLayout width="100">
-      <button text="Lesly Castillo" class="skyblue -rounded-lg"></button>
+      <button (tap)="alertMessage('App Rover', 'Aplicacion por Lesly Castillo', '100 Puntos')" text="Lesly Castillo" class="skyblue -rounded-lg"></button>
     </GridLayout>
   </ActionItem>
 </ActionBar>
