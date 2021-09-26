@@ -57,7 +57,15 @@ You can learn more about the NativeScript core theme at https://github.com/nativ
         height="100"
       >
       </image>
+      
+      <GridLayout horizontalAlignment="center" columns="115, 115" rows="50, 50">
+        <Label [text]="'ID: ' + item.id" row="0" col="0" backgroundColor="#43b883"></Label>
+        <Label text="0,1" row="0" col="1" backgroundColor="#1c6b48" ></Label>
+        <Label text="1,0" row="1" col="0" backgroundColor="#289062"></Label>
+        <Label text="1,1" row="1" col="1" backgroundColor="#43b883"></Label>
+      </GridLayout>
       </StackLayout>
+      
     </ng-template>
   </ListView>
 </GridLayout>
