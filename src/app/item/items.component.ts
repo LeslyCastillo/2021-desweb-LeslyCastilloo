@@ -8,11 +8,19 @@ import { ItemService } from './item.service'
   templateUrl: './items.component.html',
 })
 export class ItemsComponent implements OnInit {
-  items: Array<Item>
+  items: any = [];
 
   constructor(private itemService: ItemService) {}
 
+  secureLink(link: any){
+   return link.replace('http://','https://')
+  }
+
+
   ngOnInit(): void {
-    this.items = this.itemService.getItems()
+    
+    this.itemService.getItems().subscribe(response => {
+      this.items = response['photos'];
+    }, err => console.log(err));
   }
 }
