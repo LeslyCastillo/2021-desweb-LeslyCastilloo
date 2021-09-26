@@ -53,25 +53,39 @@ You can learn more about the NativeScript core theme at https://github.com/nativ
         [src]="secureLink(item.img_src)"
         stretch="aspectFill"
         loadMode="async"
-        width="300"
+        width="400"
         height="100"
       >
       </image>
-      <Label text="Fotografica por Rover:" horizontalAlignment="center"></Label>
-      <GridLayout horizontalAlignment="center" columns="200, 200" rows="30, 30">
-        <Label style="border-radius: 30;border-width: 0;" color="white" [text]="'ID: ' + item.id" row="0" col="0" backgroundColor="#43b883" ></Label>
-        <Label style="border-radius: 30;border-width: 0;" color="white" [text]="'SOL : ' + item.sol" row="0" col="1" backgroundColor="#1c6b48" ></Label>
-        <Label style="border-radius: 30;border-width: 0;" color="white" [text]="'Camara Utilizada: ' + item.camera.full_name" row="1" col="0" backgroundColor="#289062"></Label>
-        <Label style="border-radius: 30;border-width: 0;" color="white" [text]="'Fecha de la tierra: ' + item.earth_date" row="1" col="1" backgroundColor="#43b883"></Label>
+      <GridLayout class="bg-skyblue"
+      style="border-radius: 10 10 0 0;"
+      androidElevation="5"
+       backgroundhorizontalAlignment="center" 
+       columns="200, 200" rows="30, 30">
+        <Label style="border-radius: 30;border-width: 0;" 
+        color="white" [text]="'ID: ' + item.id" row="0" col="0"></Label>
+        <Label style="border-radius: 30;border-width: 0;" 
+        color="white" [text]="'SOL : ' + item.sol" row="0" col="1" ></Label>
+        <Label style="border-radius: 30;border-width: 0;" 
+        color="white" [text]="'Camara Utilizada: ' + item.camera.full_name" row="1" col="0" ></Label>
+        <Label style="border-radius: 30;border-width: 0;" 
+        color="white" [text]="'Fecha de la tierra: ' + item.earth_date" row="1" col="1"></Label>
       </GridLayout>
-      <Label text="Rover Utilizado:" horizontalAlignment="center"></Label>
-      <GridLayout horizontalAlignment="center" columns="200, 200" rows="30, 30">
-        <Label style="border-radius: 30;border-width: 0;" color="white" [text]="'ID: ' + item.rover.id" row="0" col="0" backgroundColor="#43b883" ></Label>
-        <Label style="border-radius: 30;border-width: 0;" color="white" [text]="'Nombre : ' + item.rover.name" row="0" col="1" backgroundColor="#1c6b48" ></Label>
-        <Label style="border-radius: 30;border-width: 0;" color="white" [text]="'Fecha Aterrizaje: ' + item.rover.landing_date" row="1" col="0" backgroundColor="#289062"></Label>
-        <Label style="border-radius: 30;border-width: 0;" color="white" [text]="'Fecha de Lanzamiento: ' + item.rover.launch_date" row="1" col="1" backgroundColor="#43b883"></Label>
+      <GridLayout class="bg-skyblue"
+      style="border-radius: 0 0 10 10;"
+      androidElevation="5"
+      horizontalAlignment="center" columns="200, 200" rows="30, 30">
+        <Label color="white" [text]="'ID: ' + item.rover.id" row="0" col="0" 
+         ></Label>
+        <Label color="white" [text]="'Nombre : ' + item.rover.name" row="0" col="1" 
+         ></Label>
+        <Label color="white" [text]="'Fecha Aterrizaje: ' + item.rover.landing_date" row="1" col="0" 
+        ></Label>
+        <Label color="white" [text]="'Fecha de Lanzamiento: ' + item.rover.launch_date" row="1" col="1" 
+        ></Label>
       </GridLayout>
-      <hr>
+      <hr><hr><hr>
+      <br>
       </StackLayout>
       
     </ng-template>
