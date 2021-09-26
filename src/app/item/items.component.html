@@ -11,19 +11,25 @@ The ActionBar is the NativeScript common abstraction over the Android ActionBar 
 http://docs.nativescript.org/ui/action-bar
 -->
 <ActionBar
-   title="App Rover - UMG">
+   title="App Rover - UMG"
+   class="bg-skyblue"
+   >
   <!-- Creating custom views for ActionItem-->
   <ActionItem
   android.position="right"
   >
     <GridLayout width="100">
-      <button (tap)="alertMessage('App Rover', 'Aplicacion por Lesly Castillo', '100 Puntos')" text="Lesly Castillo" class="skyblue -rounded-lg"></button>
+      <button (tap)="alertMessage('App Rover', 'Aplicacion por Lesly Castillo', '100 Puntos')" text="Lesly Castillo" class="button-red -rounded-lg"></button>
     </GridLayout>
   </ActionItem>
 </ActionBar>
 <style>
-  .skyblue{
+  .button-red{
     background-color:rgb(173, 65, 65);
+    color: #fff;
+  }
+  .bg-skyblue{
+    background-color: rgb(60, 97, 218);
     color: #fff;
   }
 </style>
